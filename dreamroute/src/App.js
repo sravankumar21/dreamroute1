@@ -20,7 +20,17 @@ import CareerRoadmapGraphView from './pages/CareerRoadmapGraphView';
 import SignInPage from './pages/SigninPage';
 import BlogPage from './pages/BlogPage';
 import ResourceLibrary from './pages/ResourceLibrary';
-import ProtectedRoute from './components/ProtectedRoute';
+import ResumeBuilder1 from './pages/ResumeBuilder1';
+import MockInterviewPage from './pages/MockInterviewPage'
+import ProfessionalMock from './pages/ProfessionalMock';
+import PortfolioBuilder from './pages/PortfolioBuilder';
+import ProfessionalForm from './pages/ProfessionalForm';
+import FeedbackList from './pages/FeedbackList';
+import Hackerquiz from './pages/Quiz'
+import Gamification from './pages/Gamification';
+import ScienceTrivia from './pages/ScienceTrivia';
+import VocabularyBuilder from './pages/VocabularyBuilder';
+import TypingMastery from './pages/TypingMastery';
 
 function App() {
   return (
@@ -31,24 +41,37 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/signin" element={<SignInPage />} />
+          
+          {/* Previously protected routes, now accessible to all */}
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/admindashboard" element={<Dashboard />} />
+          <Route path="/adminskillsadd" element={<AdminSkillEvaluator />} />
+          <Route path="/student-skill-evaluator" element={<StudentSkillEvaluator />} />
+          <Route path="/exam/:domain" element={<ExamPage />} />
+          <Route path="/career-coach" element={<CareerCoach />} />
+          <Route path="/interview-prep" element={<InterviewPreparation />} />
+          <Route path="/resume-enhancer" element={<ResumeBuilder />} />
+          <Route path="/resume-builder" element={<ResumeBuilder1 />} />
+          <Route path="/path-finder" element={<CareerRoadmap />} />
+          <Route path="/job-matcher" element={<JobRoleRecommendation />} />
+          <Route path="/quick-revision" element={<QuickRevision />} />
+          <Route path="/adminjobadd" element={<AdminCreateOpportunity />} />
+          <Route path="/find-opportunity" element={<Opportunities />} />
+          <Route path="/graphview" element={<CareerRoadmapGraphView />} />
+          <Route path="/blogs" element={<BlogPage />} />
+          <Route path="/resource-library" element={<ResourceLibrary />} />
+          <Route path="/mock-interview" element={<MockInterviewPage/>} />
+          <Route path="/pro-mock-interview" element={<ProfessionalMock/>} />
+          <Route path="/portfolio-builder" element={<PortfolioBuilder />} />
+          <Route path="/professional-form" element={<ProfessionalForm />} />
+          <Route path="/feedback-list" element={<FeedbackList />} />
+          <Route path="/hacker-quiz" element={<Hackerquiz />} />
+          <Route path="/gamification" element={<Gamification />} />
+          <Route path="/science-quiz" element={<ScienceTrivia />} />
+          <Route path="/typing-quiz" element={<TypingMastery />} />
+          <Route path="/vocab-quiz" element={<VocabularyBuilder />} />
+          
 
-          {/* Protected routes */}
-          <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-          <Route path="/admindashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-          <Route path="/adminskillsadd" element={<ProtectedRoute><AdminSkillEvaluator /></ProtectedRoute>} />
-          <Route path="/student-skill-evaluator" element={<ProtectedRoute><StudentSkillEvaluator /></ProtectedRoute>} />
-          <Route path="/exam/:domain" element={<ProtectedRoute><ExamPage /></ProtectedRoute>} />
-          <Route path="/career-coach" element={<ProtectedRoute><CareerCoach /></ProtectedRoute>} />
-          <Route path="/interview-prep" element={<ProtectedRoute><InterviewPreparation /></ProtectedRoute>} />
-          <Route path="/resume-builder" element={<ProtectedRoute><ResumeBuilder /></ProtectedRoute>} />
-          <Route path="/path-finder" element={<ProtectedRoute><CareerRoadmap /></ProtectedRoute>} />
-          <Route path="/job-matcher" element={<ProtectedRoute><JobRoleRecommendation /></ProtectedRoute>} />
-          <Route path="/quick-revision" element={<ProtectedRoute><QuickRevision /></ProtectedRoute>} />
-          <Route path="/adminjobadd" element={<ProtectedRoute><AdminCreateOpportunity /></ProtectedRoute>} />
-          <Route path="/find-opportunity" element={<ProtectedRoute><Opportunities /></ProtectedRoute>} />
-          <Route path="/graphview" element={<ProtectedRoute><CareerRoadmapGraphView /></ProtectedRoute>} />
-          <Route path="/blogs" element={<ProtectedRoute><BlogPage /></ProtectedRoute>} />
-          <Route path="/resource-library" element={<ProtectedRoute><ResourceLibrary /></ProtectedRoute>} />
         </Routes>
       </div>
     </Router>

@@ -6,8 +6,7 @@ const questionSchema = new mongoose.Schema({
   question: { type: String, required: true },
   options: { type: [String], required: true },
   correctAnswer: { type: String, required: true },
-  skillLevel: { type: String, required: true },
-  mode: { type: String, required: true }  // Added field for mode
+  skillLevel: { type: String, required: true }  // Added field
 });
 
 const Question = mongoose.model('Question', questionSchema);

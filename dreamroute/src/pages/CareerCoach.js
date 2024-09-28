@@ -15,7 +15,7 @@ const CareerCoach = () => {
     browserSupportsSpeechRecognition,
   } = useSpeechRecognition();
 
-  // Update the text state with the current transcript in real time
+  // Update the text state with the current transcript in real-time
   useEffect(() => {
     setText(transcript);
   }, [transcript]);
@@ -34,25 +34,41 @@ const CareerCoach = () => {
   };
 
   const handleSubmit = async () => {
-    if (text.trim() === '') return;
-    setResponses([...responses, { type: 'user', text }]);
+    if (text.trim() === '') return; // Prevent submitting empty messages
+    setResponses((prev) => [...prev, { type: 'user', text }]);
 
     try {
-      const response = await fetch('/api/career-coach', {
+      const response = await fetch('http://127.0.0.1:5001/careercoach', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: text }),
       });
 
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
       const data = await response.json();
-      setResponses((prev) => [
-        ...prev,
-        { type: 'bot', text: data.response },
-      ]);
-      setText('');
-      resetTranscript();
+
+      // Log the backend response for debugging
+      console.log('Career chatbot prediction result:', data);
+
+      const predictedResponses = data.responses;
+
+      // Select a random response from the predicted responses
+      const randomResponse = predictedResponses[Math.floor(Math.random() * predictedResponses.length)];
+
+      // Add bot's response to the chat
+      setResponses((prev) => [...prev, { type: 'bot', text: randomResponse }]);
+
+      setText(''); // Clear the text input
+      resetTranscript(); // Reset the speech recognition transcript
     } catch (error) {
       console.error('Error:', error);
+      setResponses((prev) => [
+        ...prev,
+        { type: 'bot', text: 'Sorry, there was an error. Please try again.' },
+      ]);
     }
   };
 

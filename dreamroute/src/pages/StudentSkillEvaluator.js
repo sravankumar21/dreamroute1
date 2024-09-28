@@ -12,8 +12,8 @@ import contentWritingImage from '../images/newfeatureimage.avif';
 import projectManagementImage from '../images/newfeatureimage.avif';
 
 const domains = [
-  { name: 'Web Development', type: 'tech', image: webDevImage },
-  { name: 'Data Science', type: 'tech', image: dataScienceImage },
+  { name: 'Java', type: 'tech', image: webDevImage },
+  { name: 'Web Development', type: 'tech', image: dataScienceImage },
   { name: 'Machine Learning', type: 'tech', image: mlImage },
   { name: 'Cybersecurity', type: 'tech', image: cybersecurityImage },
   { name: 'Operating Systems', type: 'tech', image: webDevImage },

@@ -1,0 +1,131 @@
+.Appquiz {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* quiz.css */
+
+/* General styles for the quiz components */
+.quiz-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.question {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.answer-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center elements horizontally */
+    margin: 20px 0; /* Add some space above and below */
+}
+
+.answer-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 60%; /* Adjust width as needed */
+    font-size: 1rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px; /* Space above the buttons */
+}
+
+.submit-button,
+.skip-button {
+    padding: 10px 15px; /* Add padding for buttons */
+    border: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.submit-button {
+    background-color: blue; /* Change to desired color */
+    color: white; /* Text color */
+}
+
+.skip-button {
+    background-color: gray; /* Change to desired color */
+    color: white; /* Text color */
+}
+
+.submit-button:hover,
+.skip-button:hover {
+    opacity: 0.8; /* Change color on hover */
+}
+
+.feedback {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.end-message {
+    font-size: 1.5rem;
+    color: green;
+}
+
+.score {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.word {
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1.5rem;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.typing-area {
+    width: 80%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.typing-feedback {
+    font-size: 1.2rem;
+    color: red;
+}
+
+.start-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.start-button:hover {
+    background-color: darkblue; /* Darker blue on hover */
+}
+

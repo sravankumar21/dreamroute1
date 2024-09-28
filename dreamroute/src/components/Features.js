@@ -10,13 +10,13 @@ import studentFeatureImage5 from '../images/student1.jpg';
 import studentFeatureImage6 from '../images/student1.jpg';
 import studentFeatureImage7 from '../images/student1.jpg';
 import studentFeatureImage8 from '../images/student1.jpg';
-import professionalFeatureImage2 from '../images/wide1_files/10886173.jpg';
+
 import professionalFeatureImage3 from '../images/wide1_files/10886173.jpg';
 import professionalFeatureImage4 from '../images/wide1_files/10886173.jpg';
 import professionalFeatureImage5 from '../images/wide1_files/10886173.jpg';
 import professionalFeatureImage6 from '../images/wide1_files/10886173.jpg';
 import professionalFeatureImage7 from '../images/wide1_files/10886173.jpg';
-import professionalFeatureImage8 from '../images/wide1_files/10886173.jpg';
+
 
 const studentFeatures = [
   { title: 'Career Coach', description: 'Engage in real-time conversations tailored to your career goals.', image: studentFeatureImage1, route: '/career-coach' },
@@ -28,7 +28,7 @@ const studentFeatures = [
   { title: 'Resume Enhancer', description: 'Polish your resume for better career prospects.', image: studentFeatureImage5, route: '/resume-enhancer' },
   { title: 'Interview Prep', description: 'Prepare for interviews with tailored questions.', image: studentFeatureImage3, route: '/interview-prep' },
   { title: 'Quick Revision', description: 'Learn and refresh quickly before interviews.', image: studentFeatureImage8, route: '/quick-revision' },
-  { title: 'Schedule a Video Call', description: 'Set up and schedule interviews seamlessly.', image: studentFeatureImage5, route: '/schedule-video-call' },
+  { title: 'Schedule a Mock interview', description: 'Set up and schedule interviews with ai seamlessly.', image: studentFeatureImage5, route: '/mock-interview' },
   { title: 'Job Matcher', description: 'Match your profile with job opportunities.', image: studentFeatureImage5, route: '/job-matcher' },
   { title: 'Find Opportunities', description: 'Locate the right job openings suited to your profile.', image: studentFeatureImage4, route: '/find-opportunity' },
 ];
@@ -36,16 +36,12 @@ const studentFeatures = [
 const professionalFeatures = [
  
   { title: 'Portfolio Builder', description: 'Create a professional portfolio to showcase your work.', image: professionalFeatureImage4, route: '/portfolio-builder' },
-  { title: 'Interview Simulation', description: 'Simulate interviews to sharpen your skills.', image: professionalFeatureImage5, route: '/interview-simulation' },
+  { title: 'Interview Simulation', description: 'Simulate interviews to sharpen your skills.', image: professionalFeatureImage5, route: '/pro-mock-interview' },
   
-  { title: 'Advanced Skill Assessments', description: 'Evaluate your expertise with in-depth tests.', image: professionalFeatureImage2, route: '/advanced-skill-assessments' },
-  { title: 'Career Advancement Resources', description: 'Access materials to boost your career progression.', image: professionalFeatureImage8, route: '/career-resources' },
-  { title: 'Skill Enhancement Workshops', description: 'Participate in workshops to enhance your skills.', image: professionalFeatureImage2, route: '/skill-workshops' },
+  { title: 'Professional Networking', description: 'Expand your professional network effectively.', image: professionalFeatureImage3, route: '/professional-form' },
+  { title: 'Feedback & Reviews (Community)', description: 'Receive constructive feedback on your applications.', image: professionalFeatureImage7, route: '/feedback-list' },
 
-  { title: 'Professional Networking', description: 'Expand your professional network effectively.', image: professionalFeatureImage3, route: '/networking' },
-  { title: 'Feedback & Reviews (Community)', description: 'Receive constructive feedback on your applications.', image: professionalFeatureImage7, route: '/feedback-reviews' },
-
-  { title: 'Job Search Optimization', description: 'Enhance your job search strategies.', image: professionalFeatureImage6, route: '/job-search-optimization' },
+  { title: 'Job Search Optimization', description: 'Enhance your job search strategies.', image: professionalFeatureImage6, route: '/job-matcher' },
 ];
 
 const Features = () => {
@@ -179,23 +175,10 @@ const Features = () => {
       ))}
     </div>
 
-    <h3 className="group-heading">Enhance Your Skills</h3>
-    <div className="features-grid three-columns">
-      {professionalFeatures.slice(2, 5).map((feature, index) => (
-        <div key={feature.title} className="feature-item" ref={el => featureItemsRef.current[index + 1] = el}>
-          <img src={feature.image} alt={feature.title} className="feature-image" />
-          <div className="feature-content">
-            <h3 className="feature-title">{feature.title}</h3>
-            <p className="feature-description">{feature.description}</p>
-            <button className="feature-button" onClick={() => navigate(feature.route)}>Let's Dive In</button>
-          </div>
-        </div>
-      ))}
-    </div>
 
     <h3 className="group-heading">Expand Your Network</h3>
     <div className="features-grid two-columns">
-      {professionalFeatures.slice(5, 7).map((feature, index) => (
+      {professionalFeatures.slice(2, 4).map((feature, index) => (
         <div key={feature.title} className="feature-item" ref={el => featureItemsRef.current[index + 4] = el}>
           <img src={feature.image} alt={feature.title} className="feature-image" />
           <div className="feature-content">
@@ -209,7 +192,7 @@ const Features = () => {
 
     <h3 className="group-heading">Boost Your Job Search</h3>
     <div className="features-grid three-columns" style={{ display: 'flex', justifyContent: 'center' }}>
-      {professionalFeatures.slice(7).map((feature, index) => (
+      {professionalFeatures.slice(4).map((feature, index) => (
         <div key={feature.title} className="feature-item" ref={el => featureItemsRef.current[index + 5] = el} style={{ width: 'calc(66.66% - 20px)' }}>
           <img src={feature.image} alt={feature.title} className="feature-image" />
           <div className="feature-content">

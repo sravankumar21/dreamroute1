@@ -1,12 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const { addQuestion, generateQuestions } = require('../Controllers/questionController');
+const { addQuestion } = require('../controllers/questionController');
+const Question = require('../Models/question');
 
-// Route to add a question manually
+// Route to add a question
 router.post('/questions', addQuestion);
-
-// Route to generate questions automatically
-router.post('/generate-questions', generateQuestions);
 
 // Route to get questions based on domain and skill level
 router.get('/questions/:domain/:skillLevel', async (req, res) => {

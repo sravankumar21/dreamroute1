@@ -10,10 +10,14 @@ import featureImage6 from '../images/newfeatureimage.avif';
 import featureImage7 from '../images/newfeatureimage.avif';
 
 const featuresData = [
-{ title: 'Manage Users', image: featureImage6, route: '/user-management' },
+  { title: 'Manage Users', image: featureImage6, route: '/user-management' },
   { title: 'Skill Evaluator', image: featureImage5, route: '/adminskillsadd' },
   { title: 'Create Opportunity', image: featureImage7, route: '/adminjobadd' },
+  { title: 'Upload a Blog', image: featureImage7, route: '/blogadd' },
+  { title: 'Post Professional Networking', image: featureImage5, route: '/professional-form' },
+  { title: 'View Feedback & Reviews', image: featureImage6, route: '/adminfeedback' },
 ];
+
 
 const AdminDashboard = () => {
   const navigate = useNavigate();

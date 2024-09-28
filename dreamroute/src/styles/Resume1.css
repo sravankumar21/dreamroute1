@@ -1,0 +1,125 @@
+/* Resume Container */
+.resume-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .resume-personal-info {
+    flex: 1;
+  }
+  
+  .resume-photo img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .resume-section {
+    margin-top: 20px;
+  }
+  
+  .resume-section h3 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+  }
+  
+  /* Divider */
+  .section-divider {
+    border: none;
+    border-top: 2px solid #007bff;
+    margin: 20px 0;
+  }
+  
+  /* Form Styling */
+  .resume-form {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  input[type="file"] {
+    margin-top: 10px;
+  }
+  
+  /* Alignment of left form and right resume */
+  .row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .col-md-6 {
+    flex: 1;
+  }
+  
+  .portfolio-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .portfolio-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .portfolio-section {
+    margin-top: 20px;
+  }
+  
+  .section-divider {
+    margin: 20px 0;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  

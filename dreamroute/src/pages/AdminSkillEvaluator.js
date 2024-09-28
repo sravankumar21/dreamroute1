@@ -62,7 +62,7 @@ const AdminSkillEvaluator = () => {
 
     if (form.mode === 'auto' && form.generatedQuestions.length > 0) {
       for (let question of form.generatedQuestions) {
-        await axios.post('http://localhost:4000/api/questions', {
+        await axios.post('http://localhost:4000/api', {
           domain: form.domain,
           domainType: form.domainType,
           question: question.question,

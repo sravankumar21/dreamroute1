@@ -2,6 +2,8 @@ from flask import Flask
 from flask_cors import CORS
 from recommendation import recommendation_bp
 from chatbot import chatbot_bp
+from careerchatbot import careerchatbot_bp  
+
 
 # Initialize the Flask application
 app = Flask(__name__)
@@ -12,6 +14,7 @@ CORS(app)
 # Register blueprints
 app.register_blueprint(recommendation_bp)
 app.register_blueprint(chatbot_bp)
+app.register_blueprint(careerchatbot_bp)
 
 if __name__ == '__main__':
     print("Starting the Flask server...")
