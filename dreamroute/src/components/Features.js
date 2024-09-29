@@ -11,7 +11,7 @@ import studentFeatureImage6 from '../images/student1.jpg';
 import studentFeatureImage7 from '../images/student1.jpg';
 import studentFeatureImage8 from '../images/student1.jpg';
 
-import professionalFeatureImage3 from '../images/wide1_files/10886173.jpg';
+
 import professionalFeatureImage4 from '../images/wide1_files/10886173.jpg';
 import professionalFeatureImage5 from '../images/wide1_files/10886173.jpg';
 import professionalFeatureImage6 from '../images/wide1_files/10886173.jpg';
@@ -38,8 +38,7 @@ const professionalFeatures = [
   { title: 'Portfolio Builder', description: 'Create a professional portfolio to showcase your work.', image: professionalFeatureImage4, route: '/portfolio-builder' },
   { title: 'Interview Simulation', description: 'Simulate interviews to sharpen your skills.', image: professionalFeatureImage5, route: '/pro-mock-interview' },
   
-  { title: 'Professional Networking', description: 'Expand your professional network effectively.', image: professionalFeatureImage3, route: '/professional-form' },
-  { title: 'Feedback & Reviews (Community)', description: 'Receive constructive feedback on your applications.', image: professionalFeatureImage7, route: '/feedback-list' },
+  { title: 'Feedback & Reviews (Community)', description: 'Receive constructive feedback on your applications.', image: professionalFeatureImage7, route: '/network' },
 
   { title: 'Job Search Optimization', description: 'Enhance your job search strategies.', image: professionalFeatureImage6, route: '/job-matcher' },
 ];
@@ -177,8 +176,8 @@ const Features = () => {
 
 
     <h3 className="group-heading">Expand Your Network</h3>
-    <div className="features-grid two-columns">
-      {professionalFeatures.slice(2, 4).map((feature, index) => (
+    <div className="features-grid three-columns" style={{ display: 'flex', justifyContent: 'center' }}>
+      {professionalFeatures.slice(2, 3).map((feature, index) => (
         <div key={feature.title} className="feature-item" ref={el => featureItemsRef.current[index + 4] = el}>
           <img src={feature.image} alt={feature.title} className="feature-image" />
           <div className="feature-content">
@@ -192,7 +191,7 @@ const Features = () => {
 
     <h3 className="group-heading">Boost Your Job Search</h3>
     <div className="features-grid three-columns" style={{ display: 'flex', justifyContent: 'center' }}>
-      {professionalFeatures.slice(4).map((feature, index) => (
+      {professionalFeatures.slice(3).map((feature, index) => (
         <div key={feature.title} className="feature-item" ref={el => featureItemsRef.current[index + 5] = el} style={{ width: 'calc(66.66% - 20px)' }}>
           <img src={feature.image} alt={feature.title} className="feature-image" />
           <div className="feature-content">

@@ -31,6 +31,7 @@ import Gamification from './pages/Gamification';
 import ScienceTrivia from './pages/ScienceTrivia';
 import VocabularyBuilder from './pages/VocabularyBuilder';
 import TypingMastery from './pages/TypingMastery';
+import Network from './pages/Network';
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
           <Route path="/science-quiz" element={<ScienceTrivia />} />
           <Route path="/typing-quiz" element={<TypingMastery />} />
           <Route path="/vocab-quiz" element={<VocabularyBuilder />} />
+          <Route path="/network" element={<Network />} />
           
 
         </Routes>

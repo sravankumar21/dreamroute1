@@ -15,7 +15,7 @@ const featuresData = [
   { title: 'Create Opportunity', image: featureImage7, route: '/adminjobadd' },
   { title: 'Upload a Blog', image: featureImage7, route: '/blogadd' },
   { title: 'Post Professional Networking', image: featureImage5, route: '/professional-form' },
-  { title: 'View Feedback & Reviews', image: featureImage6, route: '/adminfeedback' },
+  { title: 'View Feedback & Reviews', image: featureImage6, route: '/network' },
 ];
 
 
